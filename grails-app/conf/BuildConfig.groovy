@@ -44,6 +44,9 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
+
+        mavenRepo 'http://git.ml.com:8081/nexus/content/groups/Arquitectura'
+        mavenRepo 'http://git.ml.com:8081/nexus/content/repositories/MLGrailsPlugins'
     }
 
     dependencies {
@@ -52,6 +55,10 @@ grails.project.dependency.resolution = {
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0.2-grails-2.4"
         compile 'org.apache.commons:commons-lang3:3.0'
+
+        compile('com.mercadolibre.opensource.frameworks:restclient:1.1.4') {
+            excludes 'groovy'
+        }
 
     }
 
